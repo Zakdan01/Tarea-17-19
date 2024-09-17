@@ -1,0 +1,82 @@
+.contenedor{
+    background-color: aqua;
+    padding: 10px;
+    font-size: 25px;
+    text-align: center;
+    display: grid;
+    grid-gap: 10px; /*margen*/
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 30fr 2fr;
+    grid-template-areas: "header    header     header"
+                        "slide1     contenido  slide2" 
+                        "footer     footer     footer";
+    
+}
+.contenedor>div{
+    background-color: chartreuse;
+}
+.contenedor .header{
+    background-color: yellow;
+    grid-column: header;
+    /*grid-column-start: header;
+    grid-column-end: header;*/
+    
+}
+.contenedor .slide1{
+    background-color: bisque;
+    grid-column: slide1;
+    padding: 10px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 15px 2fr 2fr;
+    grid-template-areas: "esp1"
+                        "esp2"
+                        "esp3";
+
+}
+.contenedor .slide1>div{
+    background-color: blue;
+    margin: 5px;
+    border-radius: 8px;
+}
+.contenedor .contenido{
+    background-color: yellowgreen;
+    grid-column: contenido;
+    padding: 10px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 20px 3fr;
+    grid-template-areas: "cont cont cont"
+                        "text1 text2 text3";
+}
+.contenedor .contenido .t1{
+    background-color: blueviolet;
+    margin: 5px;
+    border-radius: 8px;
+    grid-column: text1;
+}
+.contenedor .contenido .t2{
+    background-color: blueviolet;
+    margin: 5px;
+    border-radius: 8px;
+    grid-column: text2;
+}
+.contenedor .contenido .t3{
+    background-color: blueviolet;
+    margin: 5px;
+    border-radius: 8px;
+    grid-column: text3;
+}
+.contenedor .slide2{
+    background-color: bisque;
+    grid-column: slide2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+.contenedor .footer{
+    background-color: brown;
+    grid-column: footer;
+}
